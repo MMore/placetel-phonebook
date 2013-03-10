@@ -1,0 +1,6 @@
+<dl class="dl-horizontal">
+<% @numbers.each do |number| %>
+  <dt><%= number['pstn_name']  %></dt>
+  <dd><%= "#{number['pstn_prefix']} #{number['pstn_numonly'].insert(-3,'-')}" %></dd>
+<% end %>
+</dl>

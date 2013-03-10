@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= settings.title %></title>
+  <meta charset="UTF-8">
+  <%= bootstrap_assets %>
+</head>
+<body>
+
+<div class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <h1><%= settings.title %> <small>updated at <%= Time.now.strftime("%Y-%m-%d %H:%M") %></small></h1>
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
