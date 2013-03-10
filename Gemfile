@@ -2,6 +2,7 @@ source :rubygems
 
 gem 'sinatra', '~> 1.3.3'
 gem 'sinatra-twitter-bootstrap'
+gem 'json', '~> 1.7.6'
 
 group :test do
   gem 'rspec', '~> 2.11.0'

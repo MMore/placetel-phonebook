@@ -1,7 +1,7 @@
 # encoding: utf-8
 require "net/http"
 require "uri"
-require "JSON"
+require "json"
 
 class Placetel
   attr_accessor :api_key
