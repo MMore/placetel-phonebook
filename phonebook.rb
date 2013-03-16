@@ -8,6 +8,7 @@ class Phonebook < Sinatra::Base
   # CONFIG
   set :placetel_api_key, "your_api_key"
   set :title, "My Phonebook"
+  set :environment, :production
 
   api = Placetel.new settings.placetel_api_key
 
@@ -15,6 +16,12 @@ class Phonebook < Sinatra::Base
     @numbers = api.get_numbers
 
     erb :index
+  end
+
+  get '/initiate_call/:from/:to' do
+    api.initiate_call params[:from], params[:to]
+
+    'done'
   end
 
   not_found do

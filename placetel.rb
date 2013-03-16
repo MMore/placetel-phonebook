@@ -21,6 +21,17 @@ class Placetel
     response
   end
 
+  def initiate_call(from, to)
+    json_data = post_request "#{API_ENDPOINT}/initiateCall.json", { :api_key => @api_key,
+                                                                    :sipuid => from,
+                                                                    :target => to }
+    raise "no data received" if json_data.body.nil?
+
+    response = JSON.parse(json_data.body.force_encoding('UTF-8'))
+
+    raise response['descr'] if !response.is_a?(Hash) || response['result'] != '1'
+    true
+  end
 
   private
 
