@@ -1,12 +1,11 @@
-placetel-phonebook
-==================
+# placetel-phonebook
+
 
 Generates a phonebook via the Placetel API.
 Besides that it enables you to initiate calls which can be used together with a Click2Dial browser extension.
 
 
-Configuration
---------------
+## Configuration
 
 * Open phonebook.rb and set the
   * placetel_api_key and a
@@ -14,15 +13,13 @@ Configuration
 * Done!
 
 
-Run
--------------
+## Run
 
 Just start the application with `ruby phonebook.rb` and open **http://localhost:4567** in a browser. Or use something
 like passenger or unicorn to serve it. You may need to install the needed gems first using `gem install bundler && bundle install`.
 
 
-Initiate Calls
--------------
+## Initiate Calls
 
 * Install a browser extension like Telify (http://www.codepad.de/de/software/firefox-add-ons/telify.html)
 * Telify Configuration
