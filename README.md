@@ -1,5 +1,6 @@
 # placetel-phonebook
 
+[![Build Status](https://travis-ci.org/MMore/placetel-phonebook.svg)](https://travis-ci.org/MMore/placetel-phonebook)
 
 Generates a phonebook via the Placetel API.
 Besides that it enables you to initiate calls which can be used together with a Click2Dial browser extension.
