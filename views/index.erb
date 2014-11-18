@@ -1,6 +1,20 @@
-<dl class="dl-horizontal">
-<% @numbers.each do |number| %>
-  <dt><%= number['pstn_name']  %></dt>
-  <dd><%= "#{number['pstn_prefix']} #{number['pstn_numonly'].insert(-3,'-')}" %></dd>
-<% end %>
-</dl>
+<script>
+  angular.module('app', [])
+    .controller('ListController', ['$scope', function($scope) {
+      $scope.numbers = <%= @numbers.to_json %>;
+      $scope.predicate = 'fullname';
+    }]);
+</script>
+
+<input type="search" id="search" class="input-small" placeholder="Search" ng-model="searchText" ng-focus="">
+<div class="list">
+  <dl class="dl-horizontal" ng-controller="ListController">
+    <dt class="headline"><a href="" ng-click="predicate = 'fullname'; reverse=!reverse">Name</a></dt>
+    <dd class="headline"><a href="" ng-click="predicate = 'number'; reverse=!reverse">Number</a></dd>
+    <dt ng-repeat-start="number in numbers | filter:searchText | orderBy:predicate:reverse">
+      {{number.fullname}}
+    </dt>
+    <dd ng-repeat-end>{{number.formatted_number}}</dd>
+  </dl>
+</div>
+<div style="clear: both;"></div>

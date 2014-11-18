@@ -1,0 +1,5 @@
+#search { float: left; margin-right: 50px; }
+.list { display: inline-block; }
+.list .headline { text-decoration: underline; margin-bottom: 7px; }
+dl { margin-top: 0; }
+input { margin-bottom: 0; }

@@ -14,6 +14,13 @@ class Phonebook < Sinatra::Base
 
   get '/' do
     @numbers = api.get_numbers
+    @numbers.map! {|x|
+      {
+        fullname: x['pstn_name'],
+        formatted_number: "#{x['pstn_prefix']} #{x['pstn_numonly'].insert(-3, '-')}",
+        number: x['pstn_number']
+      }
+    }
 
     erb :index
   end
