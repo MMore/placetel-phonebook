@@ -12,12 +12,19 @@ Besides that it enables you to initiate calls which can be used together with a 
   * title
 * Done!
 
+## Setup
+
+* Ruby
+** Install bundler if required `gem install bundler`
+** Install dependencies `bundle install`
+* Angular
+** Install Bower `npm install -g bower`
+** Install AngularJS `bower install`
 
 ## Run
 
 Just start the application with `ruby phonebook.rb` and open **http://localhost:4567** in a browser. Or use something
-like passenger or unicorn to serve it. You may need to install the needed gems first using `gem install bundler && bundle install`.
-
+like passenger or unicorn to serve it.
 
 ## Initiate Calls
 
@@ -31,3 +38,9 @@ like passenger or unicorn to serve it. You may need to install the needed gems f
 * Done!
 
 Now you can easily click on a number in your browser to dial it.
+
+## Copyright and License
+
+Made by Mathias Nestler (c) 2013-2014. Feel free to contribute!
+
+Released under the GNU GPLv2
