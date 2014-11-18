@@ -16,11 +16,11 @@ Besides that it enables you to initiate calls which can be used together with a 
 ## Setup
 
 * Ruby
-** Install bundler if required `gem install bundler`
-** Install dependencies `bundle install`
+  * Install bundler if required `gem install bundler`
+  * Install dependencies `bundle install`
 * Angular
-** Install Bower `npm install -g bower`
-** Install AngularJS `bower install`
+  * Install Bower `npm install -g bower`
+  * Install AngularJS `bower install`
 
 ## Run
 
