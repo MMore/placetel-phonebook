@@ -1,11 +1,11 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'sinatra', '~> 1.3.3'
-gem 'sinatra-twitter-bootstrap'
+gem 'sinatra', '~> 1.4.5'
+gem 'sinatra-twitter-bootstrap', '~> 2.3.3'
 gem 'json', '~> 1.7.6'
 
 group :test do
-  gem 'rspec', '~> 2.11.0'
+  gem 'rspec', '~> 2.14.1'
   gem 'rack-test', '~> 0.6.1'
   gem 'guard-rspec', '~> 1.2.1'
 
