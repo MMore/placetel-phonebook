@@ -9,6 +9,7 @@ class Phonebook < Sinatra::Base
   set :placetel_api_key, "your_api_key"
   set :title, "My Phonebook"
   set :environment, :production
+  set :protection, :except => :frame_options # allow embedding in iframes
 
   api = Placetel.new settings.placetel_api_key
 
