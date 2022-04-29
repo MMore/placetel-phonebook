@@ -17,9 +17,9 @@ class Phonebook < Sinatra::Base
     @numbers = api.get_numbers
     @numbers.map! {|x|
       {
-        fullname: x['pstn_name'],
-        formatted_number: "#{x['pstn_prefix']} #{x['pstn_numonly'].insert(-3, '-')}",
-        number: x['pstn_number']
+        fullname: x['name'],
+        formatted_number: "#{x['prefix']} #{x['numonly'].insert(-3, '-')}",
+        number: x['number']
       }
     }
 
